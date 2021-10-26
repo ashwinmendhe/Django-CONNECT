@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{%block content%}
+
+<h1>I am notice list</h1>
+<br>
+<form method="GET">
+ <input value="{{request.GET.si}}" type="text" name="si"/> 
+ <input type="submit" />  
+</form>
+
+{% for n1 in notice_list %}
+<h3>{{n1.subject}}::{{n1.cr_date | date:"d/m/y"}}
+    <a href="/college/notice/{{n1.id}}">Read More</a>
+</h3>
+{%endfor%}
+
+{%endblock%}

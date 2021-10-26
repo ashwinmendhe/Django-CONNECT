@@ -1,0 +1,26 @@
+body{
+    background-color: #d4dae4;
+}
+
+h1{
+    color: rebeccapurple;
+    text-transform: uppercase;
+} 
+
+.kk{
+    color: aliceblue;
+}
+#ok{
+    color: rgb(49, 146, 231);
+}
+#myhead1{
+    font-size: xx-large;
+    color: rgb(136, 0, 0);
+    text-align: center;
+    text-shadow: #d4dae4;
+    border: 2px solid #020c1d;
+}
+
+.mydiv{
+    background-color: #c7cdd8;
+}
