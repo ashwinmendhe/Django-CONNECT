@@ -195,7 +195,7 @@ class MyProfileListView(ListView):
         si = self.request.GET.get("si")
         if si == None:
             si = ""
-        profList = MyProfile.objects.filter(Q(name__icontains = si) | Q(address__icontains = si) | Q(email__icontains = si) | Q(phoneno__icontains = si)).order_by("-id");
+        profList = MyProfile.objects.filter(Q(name__icontains = si) | Q(email__icontains = si) | Q(phoneno__icontains = si)).order_by("-id");
         for p1 in profList:
             p1.followed = False
             ob = FollowUser.objects.filter(profile = p1,followed_by=self.request.user.myprofile)
