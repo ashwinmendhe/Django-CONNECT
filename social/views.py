@@ -17,10 +17,11 @@ from django.contrib.auth import authenticate, login, logout
 #Create your views here.
 # def home1(req):
 #     return render(req, "index.html") 
-@method_decorator(login_required, name="dispatch")
+
 class AboutView(TemplateView):
     template_name = "social/about.html"
-  
+
+@method_decorator(login_required, name="dispatch")  
 class HomeView(TemplateView):
     template_name = "social/home.html"
     def get_context_data(self, **kwargs):
